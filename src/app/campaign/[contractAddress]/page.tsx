@@ -14,8 +14,11 @@ import {
   useReadContract,
 } from "thirdweb/react";
 
-export const Status = ["Active", "Successful", "Failed"];
+
 export default function CampaignPage() {
+
+  const Status = ["Active", "Successful", "Failed"];
+  
   const account = useActiveAccount();
   const { contractAddress } = useParams<{ contractAddress: string }>();
   const [isEditing, setIsEditing] = useState(false);
